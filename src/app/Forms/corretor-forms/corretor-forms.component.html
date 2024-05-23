@@ -1,0 +1,24 @@
+<h1>{{btnAcao}} o Corretor</h1>
+
+<form [formGroup]="corretorForm" (ngSubmit) = "submit()" #formDit = "ngForm">
+    <div class="input_box_nome">
+      <label for="">nome:</label>
+      <input type="text" formControlName="nome" placeholder="{{nome_input}}" required maxlength="20">
+    </div>
+
+    <div class="input_box_cpf">
+      <label for="">cpf:</label>
+      <input type="text" formControlName="cpf" placeholder="{{cpf_input}}" required maxlength="11">
+    </div>
+
+    <div class="input_box_creci">
+      <label for="">creci:</label>
+      <input type="text" formControlName="creci" placeholder="{{creci_input}}" required maxlength="8">
+    </div>
+
+    <div class="btn_box_botao">
+      <button type="button" (click)="submit()" [disabled]="!corretorForm.valid" routerLink="" >{{btnAcao}}</button>
+      <button routerLink="">voltar</button>
+    </div>
+        
+</form>

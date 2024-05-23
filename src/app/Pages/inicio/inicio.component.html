@@ -1,0 +1,51 @@
+<app-Forms 
+    [btnAcao]="btnAcao"
+    [nome_input] = "nome_input"
+    [cpf_input] = "cpf_input"
+    [creci_input] = "creci_input"
+    (onsubmit)="CreateCorretor($event)">
+</app-Forms>
+
+
+
+<div>
+    <div class ="input-box">
+        <label for="">Procurar:</label>
+        <input type="text" placeholder="Qual nome esta buscando?" maxlength="20" (input)="search($event)">
+    </div>
+</div>
+
+
+<div class="div_tabela">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nome</th>
+                <th>cpf</th>
+                <th>creci</th>
+                <th class="inutil1"></th>
+                <th class="inutil1"></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let Corretor of corretores">
+            <tr>
+
+                <td>{{Corretor?.id}}</td>
+                <td>{{Corretor?.nome}}</td>
+                <td>{{Corretor?.cpf}}</td>
+                <td>{{Corretor?.creci}}</td>
+                <td class="inutil2">
+                    <LAbel routerLink="atualizar/{{Corretor.id}}">Editar</LAbel>
+                    <button routerLink="atualizar/{{Corretor.id}}"></button>
+                </td>
+                <td class="inutil2">
+                    
+                    <label (click)="DeleteCorretor(Corretor)">Deletar</label>
+                    <button (click)="DeleteCorretor(Corretor)"></button>
+                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

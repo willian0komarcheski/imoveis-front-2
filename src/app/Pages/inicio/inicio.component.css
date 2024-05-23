@@ -1,0 +1,79 @@
+app-Forms {
+    margin-bottom: 50px;
+}
+
+.table {
+    width: 800px;
+    display: table;
+    text-align: center;
+}
+
+.input-box {
+    margin-bottom: 5px;
+}
+
+.input-box input {
+    border: 2px solid black;
+    height: 20px;
+}
+
+.input-box label {
+    font-weight: bold;
+}
+
+.inutil1, .inutil2 {
+    visibility:hidden;
+    text-align: left;  
+}
+
+.table thead tr th  {
+    border: 1px solid black;
+}
+
+.table tbody td {
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+
+.inutil2 label {
+    visibility: visible;
+    margin-right: 5px;
+}
+
+.table tbody button {
+    visibility: visible;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;    
+}
+
+.table tbody button:hover {
+    background-color: black;
+}
+
+.table th, td {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+
+.input-box input {
+    width: 300px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.div_tabela {
+    background-color: #007bff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px 0px 15px 10px;
+}
+
+.inutil2 {
+ font-family: Comic Sans MS, Comic Sans, cursive;
+}
